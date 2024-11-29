@@ -151,6 +151,12 @@
       <text variable="citation-number" suffix="."/>
       <group delimiter=" ">
         <text macro="author" suffix="."/>
+        <choose>
+          <if type="chapter paper-conference" match="any">
+            <text term="in"/>
+          </if>
+        </choose>
+        <text macro="container-title"/>
         <text macro="issuance"/>
         <text variable="PMID"/>
       </group>
