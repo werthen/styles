@@ -158,7 +158,7 @@
         </choose>
         <text macro="container-title"/>
         <text macro="issuance"/>
-        <text variable="PMID"/>
+        <text variable="PMID" prefix="PMID: " />
       </group>
     </layout>
   </bibliography>
