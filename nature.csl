@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="sort-only" default-locale="en-GB">
   <info>
-    <title>Nature-custom</title>
-    <id>http://www.zotero.org/styles/nature-custom</id>
+    <title>Nature</title>
+    <id>http://www.zotero.org/styles/nature</id>
     <link href="http://www.zotero.org/styles/nature" rel="self"/>
     <link href="http://www.nature.com/nature/authors/gta/index.html#a5.4" rel="documentation"/>
     <link href="http://www.nature.com/srep/publish/guidelines#references" rel="documentation"/>
@@ -111,7 +111,7 @@
         <text variable="container-title" font-style="italic" form="short"/>
       </if>
       <else>
-        <text variable="container-title" font-style="italic" form="short"/>
+        <text variable="container-title" font-style="italic"/>
       </else>
     </choose>
   </macro>
@@ -146,19 +146,22 @@
       <text variable="citation-number"/>
     </layout>
   </citation>
-  <bibliography et-al-min="2" et-al-use-first="1" second-field-align="flush" entry-spacing="0" line-spacing="2">
+  <bibliography et-al-min="6" et-al-use-first="1" second-field-align="flush" entry-spacing="0" line-spacing="2">
     <layout suffix=".">
       <text variable="citation-number" suffix="."/>
       <group delimiter=" ">
         <text macro="author" suffix="."/>
+        <text macro="title" suffix="."/>
+        <text macro="issuance"/>
         <choose>
           <if type="chapter paper-conference" match="any">
             <text term="in"/>
           </if>
         </choose>
         <text macro="container-title"/>
-        <text macro="issuance"/>
-        <text variable="PMID" prefix="PMID: " />
+        <text macro="editor"/>
+        <text macro="volume"/>
+        <text macro="access"/>
       </group>
     </layout>
   </bibliography>
